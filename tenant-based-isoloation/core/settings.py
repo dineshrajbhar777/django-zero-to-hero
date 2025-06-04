@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     "rest_framework",
-    "tanent_isolation",
+    "tenant_isolation",
 ]
 
 MIDDLEWARE = [
@@ -82,7 +82,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = "tanent_isolation.User"
+AUTH_USER_MODEL = "tenant_isolation.User"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
