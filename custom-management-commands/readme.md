@@ -1,7 +1,6 @@
 Import or Export Employee Data
 
 Help:
-
     python.exe .\manage.py import_export_data --help
 
 Import: 
