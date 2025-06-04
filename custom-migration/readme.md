@@ -14,9 +14,9 @@ Step-by-Step Guide
 1. Modify Your Model
 Add a new field in your model:
 
-# app/models.py
 
 <pre>
+# app/models.py
 class UserProfile(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -26,24 +26,24 @@ class UserProfile(models.Model):
 
 2. Create Initial Migration
 
-`
+<pre>
 python manage.py makemigrations your_app
-`
+</pre>
 
 
 3. Create a Custom Data Migration
 
 Now generate an empty migration where you’ll add custom code:
 
-`
+<pre>
 python manage.py makemigrations your_app --empty --name populate_full_name
-`
+</pre>
 
 4. Edit the Migration File
 
 Open the migration file and add logic:
 
-`
+<pre>
 from django.db import migrations
 
 def populate_full_name(apps, schema_editor):
@@ -61,11 +61,11 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RunPython(populate_full_name),
     ]
-`
+</pre>
 
 
 5. Apply the Migration
 
-`
+<pre>
 python manage.py migrate your_app
-`
+</pre>
